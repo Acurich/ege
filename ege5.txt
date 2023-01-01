@@ -1,0 +1,99 @@
+двоичка
+for n in range(1, 100):
+    s = bin(n)[2:]
+    s = str(s)
+    if n % 2 == 0:
+        s += "00"
+    else:
+        s += "11"
+    r = int(s, 2)
+    if r > 50:
+        print(n)
+        break
+
+
+for n in range(1, 100):
+    s = bin(n)[2:] 
+    s = str(s)
+    if s.count('1') % 2 == 0: 
+        s += '1'
+    else:
+        s += '0'
+    s += str(s.count('1') % 2)
+    r = int(s, 2)
+    if r > 44:
+        print(r)
+        break
+
+def f(s):
+    summa = 0
+    for i in range(len(s)):
+        summa += int(s[i])
+    return summa
+for n in range(1, 1000):
+    s = bin(8*n)[2:]
+    s = str(s)
+    s = s + str(f(s) % 2)
+    s = s + str(f(s) % 2)
+    r = int(s, 2)
+    if r > 2214:
+        print(n)
+        break
+
+
+for n in range(1, 10000):
+    s = bin(n)[2:] 
+    s = str(s)
+    s = s[:-1]
+    if n % 2 != 0:
+        s += "10"
+    else:
+        s += "01"
+    r = int(s, 2) 
+    if r == 230:
+        print(n)
+
+
+for n in range(136, 1, -1):
+    s = bin(n)[2:]  
+    s = str(s)
+    s = s[::-1]
+    s = s[s.find('1'):]
+    r = int(s, 2)  
+    if r == 17:
+        print(n)
+        break
+
+
+for n in range(1, 100):
+    s = bin(n)[2:]
+    s = str(s)
+    s = s[s.find('1'):]
+    if s.count('1') > s.count('0'):
+        s += '1'
+    else:
+        s += '0'
+    r = int(s, 2) 
+    if r > 71:
+        print(r)
+        break
+восьмибитная
+for n in range(0, 256):
+    s = bin(n)[2:]
+    s = str(s)
+    if len(s) < 8:
+        s = '0' * (8 - len(s)) + s
+    s = s.replace('1', '*')
+    s = s.replace('0', '1')
+    s = s.replace('*', '0')
+    r = int(s, 2)
+    if r - n == 185:
+        print(n)
+
+a = []
+for x in range(240, 1501):
+    i = int(bin(x)[3:], 2)
+    if x - i not in a:
+        a.append(x-i)
+print(len(a))
+
