@@ -125,3 +125,17 @@ for x in range(240, 1501):
         a.append(x-i)
 print(len(a))
 
+№117
+mx = 0
+for n in range(1,10000):
+  r = bin(n)[2:]
+  if n % 4 == 0: r += '00'
+  elif n % 4 == 1: r += '01'
+  elif n % 4 == 2: r += '10'
+  else: r += '11'
+  r = int(r,2)
+  if r < 54 and r > mx:
+    mx = r
+print(mx)
+    
+
