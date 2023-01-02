@@ -202,3 +202,39 @@ for n in range(52, 1000):
     if r % 4 == 0:
         print(n)
         break
+        
+#124.1
+def f(s):
+    summa = 0
+    for i in range(len(s)):
+        summa += int(s[i])
+    return summa
+for n in range(1, 100):
+    n = n - (n % 4)
+    s = bin(n)[2:] 
+    s = str(s)
+    summa = f(s)
+    s = s + str(summa % 2)
+    summa = f(s)
+    s = s + str(summa % 2)
+    r = int(s, 2) 
+    if r <126:
+        print(r)
+        
+#124.2
+def f(s):
+    summa = 0
+    for i in range(len(s)):
+        summa += int(s[i])
+    return summa
+for n in range(1, 100):
+    s = bin(n)[2:] 
+    s = str(s)
+    summa = f(s)
+    s = s + str(summa % 2)
+    summa = f(s)
+    s = s + str(summa % 2)
+    r = int(s, 2) 
+    if r > 110:
+        print(r)
+        break
