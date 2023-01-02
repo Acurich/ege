@@ -148,3 +148,22 @@ for n in range(2,1000):
     print(n)
     break
     
+№123
+k = 0
+for n in range(2,1000):
+  r = n
+  if r % 2 ==0:
+    r = r // 2
+  else:
+    r = r - 1
+  if r % 3 == 0:
+    r = r // 3
+  else: 
+    r = r - 1
+  if r % 5 ==0:
+    r = r // 5
+  else:
+    r = r -1
+  if r == 4 :
+    k += 1
+print(k)
