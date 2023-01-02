@@ -177,3 +177,13 @@ for n in range(2, 100):
     if r < 120:
         print(n)
         break
+#121
+for n in range(4, 100):
+    s = bin(n)[2:] 
+    s = str(s)
+    s = s[0:len(s)-1]
+    s += s[1] * 2
+    r = int(s, 2)
+    if r > 66:
+        print(n)
+        break
