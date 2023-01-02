@@ -167,3 +167,13 @@ for n in range(2,1000):
   if r == 4 :
     k += 1
 print(k)
+
+№119
+for n in range(2, 100): 
+    s = bin(n)[2:] 
+    s = str(s)
+    s += s[1] + s[0]
+    r = int(s, 2) 
+    if r < 120:
+        print(n)
+        break
